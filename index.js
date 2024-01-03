@@ -2,11 +2,11 @@ const TelegramBot = require('node-telegram-bot-api');
 const mongoose = require('mongoose');
 const FuzzySet = require('fuzzyset');
 
-const token = process.env.TOKEN;
-const mongoDBUri = process.env.MONGODB_URI;
-console.log('Старт инициализации бота'); 
+const token = '6728558992:AAEXvqpn33bFslKPGMet2A0vm6RxGv7UfeA';
 const bot = new TelegramBot(token, { polling: true });
-console.log('Бот успешно инициализирован');
+
+const mongoDBUri = 'mongodb+srv://sevagulko747:5Ronaldinho@cluster0.rgdkql5.mongodb.net/store?retryWrites=true&w=majority';
+
 bot.setMyCommands([
   {command:'/start',description: 'начало работа'},
   {command:'/info',description: 'Все команды для бота'}
