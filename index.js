@@ -4,9 +4,9 @@ const FuzzySet = require('fuzzyset');
 
 const token = process.env.TOKEN;
 const mongoDBUri = process.env.MONGODB_URI;
-
+console.log('Старт инициализации бота'); 
 const bot = new TelegramBot(token, { polling: true });
-
+console.log('Бот успешно инициализирован');
 bot.setMyCommands([
   {command:'/start',description: 'начало работа'},
   {command:'/info',description: 'Все команды для бота'}
